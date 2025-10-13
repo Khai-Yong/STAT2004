@@ -39,5 +39,6 @@ rf_imp <- rfsrc(data = Pollute1, nodesize = 1, nsplit = 10, nimpute = 5)
 
 ```{r}
 ImputedPollute <- rf_imp$xvar
+```
 
 
