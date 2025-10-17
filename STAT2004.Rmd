@@ -34,11 +34,13 @@ Pollute1 <- Pollute[3:13]
 ```
 
 ```{r}
-rf_imp <- rfsrc(data = Pollute1, nodesize = 1, nsplit = 10, nimpute = 5)
+#nimpute is the number of iterations to create an imputed value
+rf_imp <- rfsrc(data = Pollute1, nodesize = 1, nsplit = 10, nimpute = 5, na.action = "na.impute")
 ```
 
 ```{r}
 ImputedPollute <- rf_imp$xvar
 ```
+
 
 
